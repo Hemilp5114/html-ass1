@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>THE PIZZA HUB</title>
+ 
+</head>
+<body>
+    <header>
+        <h1>THE PIZZA HUB</h1>
+        <p>"Everyday is Pizza Day!"</p>
+    </header>
+    <main>
+        <h2>Pizza Order Form</h2>
+        <form action="/submit-order" method="post">
+            <!-- Customer Information -->
+            <fieldset>
+                <legend>Customer Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">address:</label>
+                <input type="add" id="address" name="address" required>
+            </fieldset>
+
+            <!-- Pizza Details -->
+            <fieldset>
+                <legend>Pizza Details</legend>
+                <label for="number">Number of Pizzas:</label>
+                <input type="number" id="number" name="number" min="1" max="10" required>
+
+                <label>Size:</label>
+                <div>
+                    <input type="radio" id="small" name="size" value="small" required>
+                    <label for="small">Small (6 slices)</label>
+                </div>
+                <div>
+                    <input type="radio" id="medium" name="size" value="medium">
+                    <label for="medium">Medium (8 slices)</label>
+                </div>
+                <div>
+                    <input type="radio" id="large" name="size" value="large">
+                    <label for="large">Large (10 slices)</label>
+                </div>
+                <div>
+                    <input type="radio" id="Extra large" name="size" value="Extra large">
+                    <label for="Extra large">Extra Large (12 slices)</label>
+                </div>
+
+                <label for="shape">Shape:</label>
+                <select id="shape" name="shape" required>
+                    <option value="round">Round</option>
+                    <option value="square">Square</option>
+                </select>
+
+                <label for="crust">Crust:</label>
+                <select id="crust" name="crust" required>
+                    <option value="thin">Thin</option>
+                    <option value="thick">Thick</option>
+                    <option value="stuffed">Stuffed</option>
+                </select>
+            </fieldset>
+
+            <!-- Toppings -->
+            <fieldset>
+                <legend>Toppings</legend>
+                <label>Customize your toppings:</label>
+                
+                <div>
+                    <input type="checkbox" id="spinach" name="toppings" value="spinach">
+                    <label for="spinach">Spinach</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                    <label for="mushrooms">Mushrooms</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="onions" name="toppings" value="onions">
+                    <label for="onions">Onions</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="green_peppers" name="toppings" value="green_peppers">
+                    <label for="green_peppers">Green Peppers</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="extra_cheese" name="toppings" value="extra_cheese">
+                    <label for="extra_cheese">Extra Cheese</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="black_olives" name="toppings" value="black_olives">
+                    <label for="black_olives">Black Olives</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+                    <label for="pineapple">Pineapple</label>
+                </div>
+            </fieldset>
+
+            <!-- order type-->
+            <fieldset>
+                <legend>How will you Order?</legend>
+                <label>Type:</label>
+                <div>
+                    <input type="radio" id="eat_in" name="order_type" value="eat_in">
+                    <label for="eat_in">Eat-in</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="delivery" name="order_type" value="delivery">
+                    <label for="delivery">delivery(charges are extra)</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="takeout" name="order_type" value="takeout" required>
+                    <label for="takeout">Takeout</label>
+                </div>
+                
+                <label for="instructions">Special Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="4"></textarea>
+            </fieldset>
+
+            <!--for discount any coupon-->
+            <fieldset>
+                <legend>Coupon Code</legend>
+                <label for="coupon_code">Enter your coupon code:</label>
+                <input type="text" id="coupon_code" name="coupon_code">
+            </fieldset>
+
+            <!--payment method-->
+            <fieldset>
+                <legend>Payment Method</legend>
+                <label for="payment_method">Choose your payment method:</label>
+                <div>
+                    <input type="radio" id="credit_card" name="payment_method" value="credit_card" required>
+                    <label for="credit_card">Credit Card</label>
+                </div>
+                <div>
+                    <input type="radio" id="debit_card" name="payment_method" value="debit_card">
+                    <label for="debit_card">Debit Card</label>
+                </div>
+                <div>
+                    <input type="radio" id="paypal" name="payment_method" value="paypal">
+                    <label for="paypal">PayPal</label>
+                </div>
+                <div>
+                    <input type="radio" id="cash" name="payment_method" value="cash">
+                    <label for="cash">Cash</label>
+                </div>
+
+                <div id="credit_card_details" class="payment_details">
+                    <label for="card_number">Card Number:</label>
+                    <input type="text" id="card_number" name="card_number" pattern="\d{16}" placeholder="1234 5678 9101 1121">
+
+                    <label for="expiry_date">Expiry Date:</label>
+                    <input type="month" id="expiry_date" name="expiry_date">
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="123">
+                </div>
+            </fieldset>
+
+            <!--submit button-->
+            <button type="submit">Place Order</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <blockquote>
+            "You can't make everyone happy. You're not pizza."
+        </blockquote>
+
+        <!--image-->
+        <p><img src="pizza.jpg" alt="Delicious pizza"></p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pizza Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

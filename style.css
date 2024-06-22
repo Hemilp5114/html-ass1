@@ -1,0 +1,95 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)),  no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+header, footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+}
+header h1, footer p {
+    margin: 0;
+}
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #333;
+}
+h2 {
+    color: #0d11f1;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+fieldset {
+    margin-bottom: 20px;
+    border: none;
+}
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color:#0d11f1;
+    font-size: 1.2em;
+}
+label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    color: #555;
+}
+input, select, textarea, button {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: 100%;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+button {
+    background-color: #0d11f1;
+    color: white;
+    font-size: 1.2em;
+}
+button:hover {
+    background-color: #0d11f1;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+blockquote {
+    font-style: italic;
+    color: #777;
+    margin: 20px 0;
+    background-color: #fdfdfd;
+}
+.quote-author {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #555;
+}
+.dialogue {
+    background-color: #f8f8f8;
+    border: 1px solid 0d11f1;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+}
